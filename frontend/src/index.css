@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Pastel Dashboard Theme - Soft & Gentle */
+    --background: 220 20% 99%;          /* #FBFCFD very light pastel background */
+    --foreground: 222 47% 15%;          /* #1E293B soft dark blue-gray */
+
+    --card: 0 0% 100%;                  /* #FFFFFF pure white cards */
+    --card-foreground: 222 47% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 15%;
+
+    --primary: 217 91% 65%;             /* #60A5FA pastel blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;           /* #F3F4F6 soft gray hover state */
+    --secondary-foreground: 222 47% 15%;
+
+    --muted: 215 16% 50%;               /* #64748B soft gray */
+    --muted-foreground: 215 20% 70%;    /* #94A3B8 light gray text */
+
+    --accent: 217 91% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 65%;           /* #F87171 pastel red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 92%;              /* #E2E8F0 very light border */
+    --input: 214 32% 94%;
+    --ring: 217 91% 65%;
+
+    --radius: 1rem;
+
+    /* Pastel Status Colors - Soft & Gentle */
+    --critical: 0 84% 65%;              /* #F87171 pastel red */
+    --critical-bg: 0 86% 97%;           /* #FEF2F2 very light red */
+    --high-risk: 25 95% 65%;            /* #FB923C pastel orange */
+    --high-risk-bg: 25 95% 96%;         /* #FFF7ED very light orange */
+    --moderate: 38 92% 65%;             /* #FBBF24 pastel yellow */
+    --moderate-bg: 48 96% 96%;          /* #FFFBEB very light yellow */
+    --safe: 142 71% 60%;                /* #34D399 pastel green */
+    --safe-bg: 142 76% 95%;             /* #ECFDF5 very light green */
+    --info: 217 91% 65%;                /* #60A5FA pastel blue */
+    --info-bg: 214 95% 97%;             /* #EFF6FF very light blue */
+    --health: 262 83% 70%;              /* #C084FC pastel purple */
+    --health-bg: 270 100% 97%;          /* #F5F3FF very light purple */
+
+    /* Pastel Accent Colors for Charts */
+    --mint: 158 64% 75%;                /* #6EE7B7 soft mint */
+    --sky: 199 89% 80%;                 /* #BAE6FD soft sky */
+    --peach: 0 93% 85%;                 /* #FCA5A5 soft peach */
+    --lavender: 250 86% 85%;            /* #DDD6FE soft lavender */
+    --coral: 25 95% 80%;                /* #FED7AA soft coral */
+    --teal: 173 80% 75%;                /* #5EEAD4 soft teal */
+
+    /* Sidebar - Pastel */
+    --sidebar-background: 0 0% 100%;     /* #FFFFFF white */
+    --sidebar-foreground: 222 47% 15%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 15%;
+    --sidebar-border: 214 32% 92%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Typography System - Soft & Readable */
+  h1 {
+    @apply text-3xl font-bold text-slate-800;
+  }
+  
+  h2 {
+    @apply text-2xl font-bold text-slate-800;
+  }
+  
+  h3 {
+    @apply text-xl font-semibold text-slate-800;
+  }
+  
+  h4 {
+    @apply text-lg font-semibold text-slate-800;
+  }
+
+  /* Large metrics display */
+  .metric-hero {
+    @apply text-6xl font-bold tabular-nums;
+  }
+  
+  .metric-large {
+    @apply text-5xl font-bold tabular-nums;
+  }
+  
+  .metric-medium {
+    @apply text-3xl font-bold tabular-nums;
+  }
+  
+  .metric-small {
+    @apply text-2xl font-bold tabular-nums;
+  }
+
+  /* Labels */
+  .label-default {
+    @apply uppercase text-xs tracking-wide text-slate-500 font-medium;
+  }
+}
